@@ -114,20 +114,6 @@ class TokenizedForStyleRightPad(Dataset):
             return torch.LongTensor(es["input_ids"]), torch.LongTensor(es["attention_mask"]), self.references[idx]
         else:
             return es
-        # def _get_one_item(e,r):
-        #     return torch.LongTensor(e["input_ids"]), torch.LongTensor(e["attention_mask"]), torch.LongTensor(r)
-
-        # es = self.data[idx]
-
-        # if self.references is not None:
-        #     rs = self.references[idx]
-
-        # if isinstance(es, list):
-        #     return [_get_one_item(e,r) for e,r in zip(es,rs)]
-        # else:
-        #     es['reference'] = rs
-        #     return es
-
 if __name__ == "__main__":
     from anchor import hf_datasets_root
 
