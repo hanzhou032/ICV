@@ -78,11 +78,6 @@ class TokenizedForStyleRightPad(Dataset):
             e_original = self.tok(demonstration_list[exp_id][0]) 
             e_rewrite = self.tok(demonstration_list[exp_id][1])
             tokenized_demonstration_list.append((e_original, e_rewrite)) 
-        # if dataset_name == 'formality':
-        #     tokenized_demonstration_list.append((self.tok('reading this rly makes u think'),self.tok('This was a remarkably thought-provoking read.')))
-        #     tokenized_demonstration_list.append((self.tok('those are cocky girls.'),self.tok('Those are arrogant women.')))
-        #     tokenized_demonstration_list.append((self.tok('you would be genuinly suprised.'),self.tok('You would be genuinly suprised.')))
-        #     tokenized_demonstration_list.append((self.tok('IT DOESN\'T MEAN'),self.tok('It doesn\'t mean')))
         return tokenized_demonstration_list
 
     def tokenize(self, only_query, full_text, no_padding = False):
