@@ -13,7 +13,6 @@ from tasks.loader import TokenizedForStyleRightPad
 from utils.rng_ctx import RandomContext, EmptyContext
 from utils.pca import PCA
 from utils.context_manager import modified_forward_context_manager, traced_forward_context_manager
-from utils.latent_shifter import LatentShifter
 logger = logging.getLogger("task")
 
 
