@@ -276,7 +276,7 @@ class BaseProbInference:
             latents_for_all_styles= []
             for style_id in range(len(inputs[example_id])):
                 _, forward_trace = BaseProbInference.traced_forward(model, inputs[example_id][style_id], with_submodules=False)
-                task_latents = forward_trace.residual_stream.hidden[:, :, -1, :] # get last token
+                task_latents = forward_trace.residual_stream.hidden[:, :, -4:, :].mean(2,keepdim=False) #[:, :, -1, :] # get last token
                 task_latents = task_latents[:, 1:]  # the first one is the embedding layer (num_data, num_layers, hidden_size)
                 latents_for_all_styles.append(task_latents)
             h_all.append(tuple(latents_for_all_styles))
