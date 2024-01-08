@@ -18,3 +18,11 @@ Overview of our proposed In-Context Vector (ICV) approach. Our method involves a
 
 ## Reference
 For technical details and full experimental results, please check [our paper](https://arxiv.org/abs/2311.06668).
+```
+@article{liu2023context,
+  title={In-context Vectors: Making In Context Learning More Effective and Controllable Through Latent Space Steering},
+  author={Liu, Sheng and Xing, Lei and Zou, James},
+  journal={arXiv preprint arXiv:2311.06668},
+  year={2023}
+}
+```
