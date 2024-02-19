@@ -60,7 +60,7 @@ def build_model(model_type, model_size, in_8bit):
         cache_dir=str(checkpoints_root),
         device_map="auto",
         load_in_8bit=in_8bit,
-        token="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",
+        token="",
     )
     model.eval()
     return model
